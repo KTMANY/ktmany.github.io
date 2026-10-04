@@ -1,6 +1,17 @@
 # KTMANY – Unternehmenswebseite
 
-Statische Webseite (HTML/CSS, etwas JavaScript für das Handymenü) – ohne Build-Schritt, ohne Cookies, ohne Tracking und ohne externe Schriften.
+Zweisprachige statische Webseite (Deutsch unter `/`, Englisch unter `/en/`) aus HTML/CSS und etwas JavaScript für das Handymenü. Sie kommt ohne Cookies, ohne Tracking und ohne externe Schriften aus.
+
+## Inhalte ändern
+
+Alle Texte, Firmendaten und Produkte stehen in **`build.py`**, für beide Sprachen an einer Stelle (`COMPANY`, `TEXT["de"]`, `TEXT["en"]`). Die HTML-Dateien werden daraus erzeugt. Bitte nicht direkt bearbeiten, Änderungen dort gehen beim nächsten Erzeugen verloren.
+
+```
+python3 build.py     # erzeugt alle HTML-Seiten, sitemap.xml und robots.txt neu
+git add -A && git commit -m "Texte aktualisiert" && git push
+```
+
+GitHub Pages braucht keinen Build. Die erzeugten Dateien werden mit eingecheckt.
 
 ## Veröffentlichen mit GitHub Pages
 
@@ -18,23 +29,27 @@ Statische Webseite (HTML/CSS, etwas JavaScript für das Handymenü) – ohne Bui
 
 ## Vor dem Veröffentlichen ausfüllen
 
-Alle Platzhalter sind auf den Seiten gelb markiert (`class="todo"`):
+Offene Angaben sind auf den Seiten gelb markiert. Sie werden in `build.py` im Block `COMPANY` eingetragen:
 
-| Datei | Was |
+| Feld | Was |
 |---|---|
-| `impressum.html` | Rechtsform, Anschrift, Vertretungsberechtigte, Telefon, Handelsregister, USt-IdNr., Verantwortliche nach § 18 MStV |
-| `datenschutz.html` | Rechtsform und Anschrift des Verantwortlichen |
-| `index.html`, `impressum.html`, `datenschutz.html` | E-Mail `kontakt@ktmany.de` – durch die echte Adresse ersetzen, falls abweichend |
+| `register` | Registergericht und HRB-Nummer, z. B. `Amtsgericht Siegburg, HRB 12345` |
+| `vat_id` | USt-IdNr., sobald erteilt |
+| `email` | E-Mail-Adresse. Derzeit steht dort `kontakt@ktmany.de`; falls sie abweicht, ersetzen. |
 
 Impressum und Datenschutzerklärung sind Vorlagen – vor dem Livegang bitte rechtlich prüfen lassen.
 
 ## Aufbau
 
 ```
-index.html          Startseite (Leistungen, Cyber Security, Vorgehen, Über uns, Kontakt)
+build.py            Generator mit allen Texten (DE/EN)
+index.html          Startseite DE (Leistungen, Produkte, Cyber Security, Vorgehen, Über uns, Kontakt)
 impressum.html      Impressum (§ 5 DDG)
 datenschutz.html    Datenschutzerklärung
-404.html            Seite „nicht gefunden“
+en/                 Englische Fassung (index, imprint, privacy)
+404.html            Seite „nicht gefunden“ (zweisprachig)
+sitemap.xml         Sitemap mit hreflang-Verweisen
+robots.txt
 assets/style.css    Gestaltung (Farben oben als CSS-Variablen)
 assets/main.js      Handymenü, Jahreszahl, Einblenden beim Scrollen
 assets/favicon.svg  Logo-Zeichen

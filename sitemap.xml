@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://ktmany.github.io/</loc><xhtml:link rel="alternate" hreflang="de" href="https://ktmany.github.io/"/><xhtml:link rel="alternate" hreflang="en" href="https://ktmany.github.io/en/"/></url>
+  <url><loc>https://ktmany.github.io/en/</loc><xhtml:link rel="alternate" hreflang="de" href="https://ktmany.github.io/"/><xhtml:link rel="alternate" hreflang="en" href="https://ktmany.github.io/en/"/></url>
+  <url><loc>https://ktmany.github.io/impressum.html</loc><xhtml:link rel="alternate" hreflang="de" href="https://ktmany.github.io/impressum.html"/><xhtml:link rel="alternate" hreflang="en" href="https://ktmany.github.io/en/imprint.html"/></url>
+  <url><loc>https://ktmany.github.io/en/imprint.html</loc><xhtml:link rel="alternate" hreflang="de" href="https://ktmany.github.io/impressum.html"/><xhtml:link rel="alternate" hreflang="en" href="https://ktmany.github.io/en/imprint.html"/></url>
+  <url><loc>https://ktmany.github.io/datenschutz.html</loc><xhtml:link rel="alternate" hreflang="de" href="https://ktmany.github.io/datenschutz.html"/><xhtml:link rel="alternate" hreflang="en" href="https://ktmany.github.io/en/privacy.html"/></url>
+  <url><loc>https://ktmany.github.io/en/privacy.html</loc><xhtml:link rel="alternate" hreflang="de" href="https://ktmany.github.io/datenschutz.html"/><xhtml:link rel="alternate" hreflang="en" href="https://ktmany.github.io/en/privacy.html"/></url>
+</urlset>
